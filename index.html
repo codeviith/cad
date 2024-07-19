@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Lin's CAD Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Prism.js CSS for syntax color coding and highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <!-- Prism.js JavaScript for syntax color coding and highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+
+    <!-- reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- reCAPTCHA v3 -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6Lfn4vUpAAAAAIOJ7R38ZNURNyHPflg8QrfflRW4"></script> -->
+</head>
+
+<body>
+    <header>
+        <img src="pictures/20240112_194150.jpg" alt="Kevin Lin" class="profile-photo">
+        <h1>Kevin Lin</h1>
+        <p class="position">CAD Designer</p>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </header>
+
+    <section id="toc" class="toc">
+        <h2>Table of Contents</h2>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Education & Certifications</a></li>
+                <li><a href="#hobbies">Sports & Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle-container">
+            <label class="mode-label">Mode:
+                <button id="light-mode">Light</button>
+                <button id="dark-mode">Dark</button>
+            </label>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>
+            I am a versatile and driven CAD designer with over two years of experience at Display Your Passion Like a Boss LLC. My work involved bringing numerous products from concept to reality, designing detailed and functional models, and contributing significantly to the creation of an e-commerce store. During my time there, I enhanced design efficiency by 30% and successfully reduced production costs by 20%, ensuring that all products met the highest standards of quality and precision.
+        </p>
+        <p>
+            My professional journey has equipped me with a robust technical mindset and expertise in the design, implementation, and verification of components. I excel in translating both functional and technical requirements into comprehensive CAD designs. Additionally, I have applied my CAD skills to personal projects, such as designing and building my own electric skateboard, where I created custom parts tailored to specific needs. This project not only showcased my creativity and technical skills but also resulted in a 15% improvement in performance metrics.
+        </p>
+        <p>
+            With a unique blend of technical and mechanical expertise, complemented by my background in podiatric medicine, I have a strong foundation for entering fields related to healthcare, including the potential for biomedical device design. I am eager to collaborate with teams to create meaningful projects and am committed to supporting and enhancing the work of my future colleagues. My objective is to deliver impactful designs that contribute to the success of projects and drive innovation within the organization.
+        </p>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>CAD Modeling Software:</strong> AutoCAD, Fusion 360, SolidWorks, OnShape, Blender</li>
+            <li><strong>3D Slicer Software:</strong> Pronterface, PrusaSlicer, Cura, Simplify3D (S3D)</li>
+            <li><strong>3D Printing Technology:</strong> Fused Deposition Modeling (FDM), Stereolithography (SLA)</li>
+            <li><strong>Programming Skills:</strong> G-Code, ArduinoIDE</li>
+            <li><strong>Printer Maintenance/Troubleshooting:</strong> Calibration, setup, maintenance, repair</li>
+            <li><strong>Graphic Design:</strong> Adobe Photoshop (Basics), UI/UX design principles</li>
+            <li><strong>Materials Knowledge:</strong> PLA, ABS, PETG, TPU, PEEK, PLA-CF, resin materials for SLA</li>
+            <li><strong>Prototyping:</strong>
+                <ul>
+                    <li>Rapid prototyping techniques</li>
+                    <li>Iterative design and testing</li>
+                    <li>Breadboards, Arduino, Raspberry Pi, hand tools, power tools</li>
+                </ul>
+            </li>
+            <li><strong>Post-Processing:</strong> Sanding, painting, assembly, chemical smoothing</li>
+            <li><strong>Software Skills:</strong> Microsoft Office Suite, project management tools</li>
+            <li><strong>Fabrication and Manufacturing:</strong> Woodworking, Metalworking, CNC Machining, Welding</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>DIYeSk8Guide</h3>
+            <p>
+                DIYeSk8Guide is a full-stack web application I developed to provide step-by-step guidance for building
+                and customizing electric skateboards. This project stems from my passion for eboarding and my commitment
+                to empowering others to create their own high-performance electric skateboards.
+            </p>
+            <p>
+                The application utilizes a comprehensive technology stack to deliver a seamless user experience. The
+                front-end is built with JavaScript, React.js, and Tailwind CSS, creating a dynamic and responsive
+                interface. The backend is powered by Python and Flask, ensuring a robust server-side functionality. For
+                data management, I integrated AWS RDS PostgreSQL, providing reliable and scalable database solutions.
+                User authentication is secured with Bcrypt, while AWS S3 handles multimedia content storage. The
+                application is deployed using Render, streamlining the deployment process.
+            </p>
+            <p>
+                Through DIYeSk8Guide, I aim to inspire and assist fellow eboarding enthusiasts, combining my technical
+                expertise with my passion for hands-on creation. This project has not only enhanced my skills as a
+                developer but also strengthened my dedication to developing innovative and impactful software solutions.
+            </p>
+            <div class="gallery">
+                <a href="#" data-target="img1"><img src="pictures/DIYeSk8Guide - Home.png" alt="Home"></a>
+                <a href="#" data-target="img2"><img src="pictures/DIYeSk8Guide - About.png" alt="About"></a>
+                <a href="#" data-target="img3"><img src="pictures/DIYeSk8Guide - Guide.png" alt="Guide"></a>
+                <a href="#" data-target="img4"><img src="pictures/DIYeSk8Guide - Generate.png" alt="Generate"></a>
+                <a href="#" data-target="img5"><img src="pictures/DIYeSk8Guide - Guru.png" alt="Guru"></a>
+                <a href="#" data-target="img6"><img src="pictures/DIYeSk8Guide - Gallery.png" alt="Gallery"></a>
+            </div>
+            <p><a href="https://diyesk8guide.com" target="_blank" class="button">Explore the Application <i
+                        class="fas fa-external-link-alt"></i></a></p>
+            <p><a href="https://github.com/codeviith/capstone-project-diyesk8guide" target="_blank" class="button">View
+                    on GitHub <i class="fas fa-external-link-alt"></i></a>
+            </p>
+        </div>
+        <!-- Add more projects as needed -->
+        <div id="additional-projects" class="project-button">
+            <p>
+                <!-- <a href="https://codeviith.github.io/projects/" target="_blank" class="button">Additional Projects <i class="fas fa-external-link-alt"></i></a> -->
+            </p>
+        </div>
+    </section>
+    <section id="certifications" class="fade-in">
+        <h2>Education and Certifications</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="certificate-container">
+                    <h3>Full Stack Software Engineering Certificate</h3>
+                    <a href="pictures/FS - SE Certificate of Completion.jpg" target="_blank"
+                        class="certificate-button">Show Certificate <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <p>Flatiron School (December 2023)</p>
+                <img src="https://img.shields.io/badge/Flatiron%20School-Full%20Stack%20Software%20Engineering-blue"
+                    alt="Flatiron School Badge" />
+            </div>
+            <div class="timeline-item">
+                <h3>Doctor of Podiatric Medicine (DPM)</h3>
+                <p>Temple University School of Podiatric Medicine (May 2018)</p>
+                <img src="https://img.shields.io/badge/Temple%20University-DPM-red" alt="Temple University Badge" />
+            </div>
+            <div class="timeline-item">
+                <h3>Bachelor of Science in Human Biology</h3>
+                <p>University of California, San Diego (June 2012)</p>
+                <img src="https://img.shields.io/badge/UCSD-B.S.%20in%20Human%20Biology-yellow" alt="UCSD Badge" />
+            </div>
+            <!-- Add more education/certifications as needed -->
+    </section>
+
+    <section id="hobbies" class="fade-in">
+        <h2>Sports & Hobbies</h2>
+        <ul>
+            <span class="sub-header-hobbies">Sports</span>
+            <li>Swimming</li>
+            <Li>Hiking</Li>
+            <li>Badminton</li>
+            <li>Table Tennis</li>
+            <li>Raquet Ball</li>
+            <span class="sub-header-hobbies">Hobbies</span>
+            <li>DIY Projects</li>
+            <li>Electric skateboards</li>
+            <li>3D Printing and Designs</li>
+            <li>Robotics</li>
+            <li>Rubik's Cube</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <!-- reCAPTCHA v2 -->
+        <form id="contactForm" onsubmit="return verifyRecaptcha(event)">
+            <div class="g-recaptcha" data-sitekey="6Lfh4vUpAAAAAMI2Qq5ompdWU6AUDN4V4m7psohc"></div>
+            <br>
+            <button type="submit" class="button">Verify to See Contact Info</button>
+        </form>
+
+        <!-- reCAPTCHA v3 -->
+        <!-- <form id="contactForm" onsubmit="return handleFormSubmit(event)">
+            <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+            <button type="submit" class="button">Verify to See Contact Info</button>
+        </form> -->
+
+        <div id="contactInfo" style="display:none;">
+            <ul>
+                <li>
+                    <p>Location: New York, willing to relocate</p>
+                </li>
+                <li>
+                    <p>Phone: (562) 881-9558</p>
+                </li>
+                <li>
+                    <p>Email: <a href="mailto:kclin128@gmail.com">kclin128@gmail.com</a></p>
+                </li>
+                <li>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/kevinlin128/" target="_blank">View LinkedIn <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </p>
+                </li>
+                <li>
+                    <p>Github: <a href="https://github.com/codeviith/" target="_blank">View Github <i
+                                class="fas fa-external-link-alt"></i></a></p>
+                </li>
+                <li>
+                    <p>Blog: <a href="https://hashnode.com/@codeviith" target="_blank">View Blog <i
+                                class="fas fa-external-link-alt"></i></a></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Kevin Lin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- HTML Code for Lightbox  -->
+    <div id="lightbox" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Lightbox Image">
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        ///////////// Lightbox code for project gallery  /////////////
+        let currentImageIndex = 0;
+
+        const images = [
+            'pictures/DIYeSk8Guide - Home.png',
+            'pictures/DIYeSk8Guide - About.png',
+            'pictures/DIYeSk8Guide - Guide.png',
+            'pictures/DIYeSk8Guide - Generate.png',
+            'pictures/DIYeSk8Guide - Guru.png',
+            'pictures/DIYeSk8Guide - Gallery.png'
+        ];
+
+        function showLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'block';
+            document.body.classList.add('no-scroll'); // Code to disable scrolling while inside lightbox
+            updateLightboxImage();
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = images.length - 1;
+            }
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            document.getElementById('lightbox-img').src = images[currentImageIndex];
+            document.querySelector('.prev').style.display = currentImageIndex === 0 ? 'none' : 'block';
+            document.querySelector('.next').style.display = currentImageIndex === images.length - 1 ? 'none' : 'block';
+        }
+
+        document.querySelectorAll('.gallery a').forEach((link, index) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                showLightbox(index);
+            });
+        });
+
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                document.getElementById('lightbox').style.display = 'none';
+                document.body.classList.remove('no-scroll'); // Code to re-enable scrolling after closing lightbox
+            });
+        });
+
+        document.addEventListener('keydown', function (event) {  // close lightbox w. esc key
+            if (event.key === 'Escape') {
+                document.getElementById('lightbox').style.display = 'none';
+                document.body.classList.remove('no-scroll'); // Code to re-enable scrolling after closing lightbox
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {  // navigate lightbox w. arrow keys
+            if (event.key === 'ArrowRight' && currentImageIndex < images.length - 1) {
+                changeImage(1);
+            } else if (event.key === 'ArrowLeft' && currentImageIndex > 0) {
+                changeImage(-1);
+            }
+        });
+
+        ///////////// reCAPTCHA code for contact section and testimonials /////////////
+        ////// reCAPTCHA v2  //////
+        function verifyRecaptcha(event) {
+            event.preventDefault();
+
+            var response = grecaptcha.getResponse();  // code to get reCAPTCHA response
+
+            if (response.length == 0) {  // code to check if reCAPTCHA is verified
+                alert("Please verify that you are not a robot.");
+                return false;
+            } else {     // Code to show contact information
+                document.getElementById('contactInfo').style.display = 'block';
+                document.getElementById('contactForm').style.display = 'none';
+                return true;
+            }
+        }
+
+        ////// reCAPTCHA v3  //////
+        // function handleFormSubmit(event) {
+        //     event.preventDefault();
+        //     grecaptcha.ready(function () {
+        //         grecaptcha.execute('6Lfn4vUpAAAAAIOJ7R38ZNURNyHPflg8QrfflRW4', { action: 'submit' }).then(function (token) {
+        //             // Code to add token
+        //             document.getElementById('recaptcha_token').value = token;
+
+        //             // Code to show contact information
+        //             document.getElementById('contactInfo').style.display = 'block';
+        //             document.getElementById('contactForm').style.display = 'none';
+        //         });
+        //     });
+        // }
+
+
+        ///////////// Fade-In animation on scroll /////////////
+        document.addEventListener('DOMContentLoaded', function () {
+            const faders = document.querySelectorAll('.fade-in');
+
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+
+        ///////////// Smooth scrolling /////////////
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        /////////////  Progress bar code  /////////////
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressBars = document.querySelectorAll('.progress');
+
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width + '%';
+
+                if (width < 60) {
+                    bar.style.backgroundColor = 'red';
+                } else if (width < 70) {
+                    bar.style.backgroundColor = 'orange';
+                } else if (width < 80) {
+                    bar.style.backgroundColor = 'yellowgreen';
+                } else {
+                    bar.style.backgroundColor = 'green';
+                }
+            });
+
+            ///////////// Animated progress bar /////////////
+            const progressOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const animateProgress = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    const width = entry.target.getAttribute('data-width');
+                    entry.target.style.width = width + '%';
+                    observer.unobserve(entry.target);
+                });
+            }, progressOptions);
+
+            progressBars.forEach(bar => {
+                animateProgress.observe(bar);
+
+                /// Dynamic tooltips based on skill level ///
+                const width = bar.getAttribute('data-width');
+
+                let tooltipText;
+
+                if (width >= 95) {
+                    tooltipText = 'Expert';
+                } else if (width >= 90) {
+                    tooltipText = 'Advanced';
+                } else if (width >= 80) {
+                    tooltipText = 'Proficient';
+                } else if (width >= 70) {
+                    tooltipText = 'Intermediate';
+                } else if (width >= 60) {
+                    tooltipText = 'Work in Progress';
+                } else {
+                    tooltipText = 'Beginner';
+                }
+
+                bar.parentElement.setAttribute('title', tooltipText);
+                bar.parentElement.style.cursor = 'pointer';
+
+                bar.parentElement.addEventListener('click', () => {
+                    bar.innerText = width + '%';
+                    bar.style.textAlign = 'center';
+                    bar.sytle.lineHeight = '20px';
+                    bar.style.color = '#fff';
+                });
+            });
+
+            ///////////// Light and Dark Mode /////////////
+            const lightModeButton = document.querySelector('#light-mode');
+            const darkModeButton = document.querySelector('#dark-mode');
+            let currentTheme = localStorage.getItem('theme') || 'light';
+
+            document.body.classList.add(currentTheme + '-mode');  /// code to apply initial theme
+
+            function updateButtonStyles() {  /// code to update button styles on background color
+                if (currentTheme === 'light') {
+                    lightModeButton.classList.add('active');
+                    darkModeButton.classList.remove('active');
+                } else {
+                    lightModeButton.classList.remove('active');
+                    darkModeButton.classList.add('active');
+                }
+            }
+
+            updateButtonStyles();  /// invoke the function to initialize the button styles based on the curernt theme
+
+            lightModeButton.addEventListener('click', () => {
+                document.body.classList.remove('light-mode', 'dark-mode');
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+                currentTheme = 'light';  /// code to update the currentTheme variable to 'light'
+                updateButtonStyles(); /// invoke the updateButtonStyles function to update the button styles
+            });
+
+            darkModeButton.addEventListener('click', () => {
+                document.body.classList.remove('light-mode', 'dark-mode');
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+                currentTheme = 'dark'; /// code to update the currentTheme variable to 'dark'
+                updateButtonStyles(); /// invoke the updateButtonStyles function to update the button styles
+            });
+        });
+    </script>
+</body>
+
+</html>
