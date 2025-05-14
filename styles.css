@@ -8,7 +8,6 @@ body {
 }
 
 header {
-    background: #2c3e50;
     color: #ecf0f1;
     padding: 2rem 0;
     text-align: center;
@@ -85,12 +84,16 @@ a:hover {
 
 /* CSS variables for themes */
 :root {
+    --header-bg-color-dark: #2c3e50;
+    --header-text-color-dark: #ecf0f1;
+    --header-bg-color-light: #ffffff;
+    --header-text-color-light: #131c24;
     --bg-color-light: #ffffff;
-    --text-color-light: #2c3e50;
+    --text-color-light: #131c24;
     --bg-color-dark: #2c3e50;
     --text-color-dark: #ecf0f1;
-    --toc-bg-color-light: #f4f4f4;
-    --toc-text-color-light: #2c3e50;
+    --toc-bg-color-light: #b2d4ff;
+    --toc-text-color-light: #131c24;
     --toc-bg-color-dark: #1e1e1e;
     --toc-text-color-dark: #ecf0f1;
     --button-bg-light: #2c3e50;
@@ -100,9 +103,13 @@ a:hover {
     --link-color-light: darkblue;
     --link-color-dark: rgb(4, 224, 240);
     --snippet-bg-color-light: #ececec;
-    --snippet-text-color-light: #2c3e50;
+    --snippet-text-color-light: #131c24;
     --snippet-bg-color-dark: #1b1b1b;
     --snippet-text-color-dark: #ebebeb;
+    --footer-bg-color-dark: #2c3e50;
+    --footer-text-color-dark: #ecf0f1;
+    --footer-bg-color-light: #ffffff;
+    --footer-text-color-light: #131c24;
 }
 
 /* Styles for the Table of Contents */
@@ -658,6 +665,11 @@ html {
 }
 
 /* Light mode styles */
+header.light-mode {
+    background-color: var(--header-bg-color-light);
+    color: var(--header-text-color-light)
+}
+
 body.light-mode {
     background-color: var(--bg-color-light);
     color: var(--text-color-light);
@@ -766,7 +778,19 @@ body.light-mode #actual-problem-code {
     background-color: var(--snippet-bg-color-light);
 }
 
+footer.light-mode {
+    background-color: var(--footer-bg-color-light);
+    color: var(--footer-text-color-light)
+}
+
+
+
 /* Dark mode styles */
+header.dark-mode {
+    background-color: var(--header-bg-color-dark);
+    color: var(--header-text-color-dark)
+}
+
 body.dark-mode {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
@@ -864,6 +888,12 @@ body.dark-mode #solution-code {
     color: var(--snippet-text-color-dark);
     background-color: black;
 }
+
+footer.dark-mode {
+    background-color: var(--footer-bg-color-dark);
+    color: var(--footer-text-color-dark)
+}
+
 
 /* Button styles */
 .theme-toggle-container {
