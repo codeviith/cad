@@ -369,6 +369,7 @@ body {
   padding: 2rem;
   box-sizing: border-box;
   height: auto;
+  background-color: rgb(85, 84, 84);
 }
 
 .image-gallery img {
@@ -402,17 +403,29 @@ body {
 /* Mobile code */
 @media (max-width: 768px) {
   .carousel {
-    height: 80vh;
+    height: auto;
+    padding: 0;
   }
 
   .carousel-slide {
     padding: 1rem;
+    font-size: 0.95rem;
   }
 
   .carousel-slide h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .image-gallery img {
+    margin: 0.5rem 0;
   }
 }
+
 
 
 
