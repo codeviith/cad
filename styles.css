@@ -369,7 +369,21 @@ body {
   padding: 2rem;
   box-sizing: border-box;
   height: auto;
+  white-space: normal;
+  overflow-x: hidden;
+  word-wrap: break-word;
   background-color: rgb(85, 84, 84);
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-slide ul,
+.carousel-slide p {
+  max-width: 100%;
 }
 
 .image-gallery img {
