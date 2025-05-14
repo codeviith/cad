@@ -690,7 +690,7 @@ body.light-mode .project {
 }
 
 body.light-mode .carousel-slide {
-  background-color: var(--bg-color-light);
+  background-color: #e0e0e0;
   color: var(--text-color-light);
 }
 
@@ -799,7 +799,7 @@ body.dark-mode .project {
 }
 
 body.dark-mode .carousel-slide {
-  background-color: var(--bg-color-dark);
+  background-color: rgb(85, 84, 84);
   color: var(--text-color-dark);
 }
 
