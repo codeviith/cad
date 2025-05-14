@@ -345,6 +345,39 @@ body {
     opacity: 1;
 }
 
+
+
+/* project carousel */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 1s ease;
+  width: 300%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 400px;
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+
+
+
 /* Project code snippet */
 .code-snippets {
     display: flex;

@@ -232,12 +232,12 @@
                         <!-- Add more images as needed -->
                     </div>
                 </div>
-                <div id="additional-projects" class="project-button">
-                    <p>
-                        <!-- <a href="https://codeviith.github.io/projects/" target="_blank" class="button">Additional Projects <i class="fas fa-external-link-alt"></i></a> -->
-                    </p>
-                </div>
             </div>
+        </div>
+        <div id="additional-projects" class="project-button">
+            <p>
+                <!-- <a href="https://codeviith.github.io/projects/" target="_blank" class="button">Additional Projects <i class="fas fa-external-link-alt"></i></a> -->
+            </p>
         </div>
     </section>
 
@@ -347,6 +347,9 @@
         </div>
     </div>
 
+
+
+
     <!-- JavaScript -->
     <script>
         ///////////// Lightbox code for project gallery  /////////////
@@ -360,6 +363,7 @@
             'pictures/DIYeSk8Guide - Guru.png',
             'pictures/DIYeSk8Guide - Gallery.png'
         ];
+
 
         function showLightbox(index) {
             currentImageIndex = index;
@@ -384,6 +388,7 @@
             document.querySelector('.prev').style.display = currentImageIndex === 0 ? 'none' : 'block';
             document.querySelector('.next').style.display = currentImageIndex === images.length - 1 ? 'none' : 'block';
         }
+
 
         document.querySelectorAll('.gallery a').forEach((link, index) => {
             link.addEventListener('click', (event) => {
@@ -553,6 +558,25 @@
                     bar.style.color = '#fff';
                 });
             });
+
+
+            ///////////// Project Carousel /////////////
+            let currentSlide = 0;
+
+            const slides = document.querySelectorAll('.carousel-slide');
+            const track = document.querySelector('.carousel-track');
+
+
+            function moveToSlide(index) {
+                const slideWidth = slides[0].offsetWidth;
+                track.style.transform = `translateX(-${index * slideWidth}px)`;
+            }
+
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                moveToSlide(currentSlide);
+            }, 5000);
+
 
             ///////////// Light and Dark Mode /////////////
             const lightModeButton = document.querySelector('#light-mode');
