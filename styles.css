@@ -665,7 +665,7 @@ html {
 }
 
 /* Light mode styles */
-header.light-mode {
+body.light-mode header {
     background-color: var(--header-bg-color-light);
     color: var(--header-text-color-light)
 }
@@ -778,7 +778,7 @@ body.light-mode #actual-problem-code {
     background-color: var(--snippet-bg-color-light);
 }
 
-footer.light-mode {
+body.light-mode .footer {
     background-color: var(--footer-bg-color-light);
     color: var(--footer-text-color-light)
 }
@@ -786,7 +786,7 @@ footer.light-mode {
 
 
 /* Dark mode styles */
-header.dark-mode {
+body.dark-mode header {
     background-color: var(--header-bg-color-dark);
     color: var(--header-text-color-dark)
 }
@@ -889,7 +889,7 @@ body.dark-mode #solution-code {
     background-color: black;
 }
 
-footer.dark-mode {
+body.dark-mode .footer {
     background-color: var(--footer-bg-color-dark);
     color: var(--footer-text-color-dark)
 }
