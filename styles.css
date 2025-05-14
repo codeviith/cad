@@ -353,6 +353,7 @@ body {
   overflow: hidden;
   position: relative;
   max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 10px;
   background-color: #1a1a1a10;
@@ -361,18 +362,21 @@ body {
 .carousel-track {
   display: flex;
   transition: transform 0.8s ease-in-out;
-  width: 300%;
+  width: 100%;
 }
 
 .carousel-slide {
   flex: 0 0 100%;
+  width: 100%;
   padding: 2rem;
   box-sizing: border-box;
   height: auto;
-  white-space: normal;
-  overflow-x: hidden;
-  word-wrap: break-word;
   background-color: rgb(85, 84, 84);
+
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
 }
 
 .carousel-slide img {
@@ -381,9 +385,20 @@ body {
   display: block;
 }
 
+/* Code to prevent any internal blocks from forcing overflow */
 .carousel-slide ul,
-.carousel-slide p {
+.carousel-slide p,
+.carousel-slide h3,
+.carousel-slide h4 {
   max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.6;
+}
+
+.carousel-slide li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .image-gallery img {
@@ -413,6 +428,7 @@ body {
 .carousel-btn.next {
   right: 10px;
 }
+
 
 /* Mobile code */
 @media (max-width: 768px) {
