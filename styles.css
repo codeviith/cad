@@ -160,7 +160,8 @@ body {
 }
 
 /* Justify text for about and projects section */
-#about p, #projects p {
+#about p,
+#projects p {
     text-align: justify;
 }
 
@@ -357,109 +358,99 @@ body {
 
 /* project carousel */
 .carousel {
-  overflow: hidden;
-  position: relative;
-  max-width: 100%;
-  width: 100%;
-  margin: 0 auto;
-  border-radius: 10px;
-  background-color: #1a1a1a10;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    margin: 2rem auto;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-track {
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-  width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
-  flex: 0 0 100%;
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
-  height: auto;
-
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  overflow-x: hidden;
-}
-
-.carousel-slide img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Code to prevent any internal blocks from forcing overflow */
-.carousel-slide ul,
-.carousel-slide p,
-.carousel-slide h3,
-.carousel-slide h4 {
-  max-width: 100%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  line-height: 1.6;
-}
-
-.carousel-slide li {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.image-gallery img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 1rem 0;
+    min-width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
 }
 
 .carousel-btn.prev {
-  left: 10px;
+    left: 10px;
 }
 
 .carousel-btn.next {
-  right: 10px;
+    right: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.image-gallery img {
+    max-width: 48%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .image-gallery img {
+        max-width: 100%;
+    }
 }
 
 
 /* Mobile code */
 @media (max-width: 768px) {
-  .carousel {
-    height: auto;
-    padding: 0;
-  }
+    .carousel {
+        height: auto;
+        padding: 0;
+    }
 
-  .carousel-slide {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
+    .carousel-slide {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
 
-  .carousel-slide h3 {
-    font-size: 1.2rem;
-  }
+    .carousel-slide h3 {
+        font-size: 1.2rem;
+    }
 
-  .carousel-btn {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
+    .carousel-btn {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
 
-  .image-gallery img {
-    margin: 0.5rem 0;
-  }
+    .image-gallery img {
+        margin: 0.5rem 0;
+    }
 }
 
 
@@ -658,8 +649,8 @@ body.light-mode .project {
 }
 
 body.light-mode .carousel-slide {
-  background-color: #e0e0e0;
-  color: var(--text-color-light);
+    background-color: #e0e0e0;
+    color: var(--text-color-light);
 }
 
 body.light-mode #testimonials {
@@ -779,20 +770,22 @@ body.dark-mode .project {
 }
 
 body.dark-mode .carousel-slide {
-  background-color: rgb(85, 84, 84);
-  color: var(--text-color-dark);
+    background-color: rgb(85, 84, 84);
+    color: var(--text-color-dark);
 }
 
 body.dark-mode #testimonials {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
-    border-left-color: var(--bg-color-light);;
+    border-left-color: var(--bg-color-light);
+    ;
 }
 
 body.dark-mode .testimonial {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
-    border-left-color: var(--bg-color-light);;
+    border-left-color: var(--bg-color-light);
+    ;
 }
 
 body.dark-mode .recommendation {
@@ -902,4 +895,3 @@ body.dark-mode .footer {
     justify-content: center;
     align-items: center;
 }
-
