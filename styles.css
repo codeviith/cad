@@ -356,6 +356,7 @@ body {
 
 
 
+
 /* project carousel */
 .carousel {
     overflow: hidden;
@@ -425,54 +426,6 @@ body {
         max-width: 100%;
     }
 }
-
-
-
-/* new addition start*/
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    background: rgba(0, 0, 0, 0.3);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    transform: translateY(-50%);
-    z-index: 1;
-    padding: 0.5rem;
-}
-
-.carousel-btn.prev {
-    left: 5px;
-}
-
-.carousel-btn.next {
-    right: 5px;
-}
-
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.carousel-indicator {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-indicator.active {
-    background-color: #333;
-}
-
-/* new addition end*/
-
-
 
 
 

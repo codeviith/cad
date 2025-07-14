@@ -235,7 +235,6 @@
                 </div>
             </div>
             <button class="carousel-btn next">&#10095;</button>
-            <div class="carousel-indicators"></div>
         </div>
         <div id="additional-projects" class="project-button">
             <p>
@@ -571,96 +570,46 @@
 
 
             ///////////// Project Carousel /////////////
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-slide');
+            const track = document.querySelector('.carousel-track');
+            const prevButton = document.querySelector('.carousel-btn.prev');
+            const nextButton = document.querySelector('.carousel-btn.next');
+
+            function moveToSlide(index) {
+                const slideWidth = slides[0].offsetWidth;
+                track.style.transform = `translateX(-${index * slideWidth}px)`;
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                moveToSlide(currentSlide);
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                moveToSlide(currentSlide);
+            });
+
+            window.addEventListener('resize', () => moveToSlide(currentSlide));
+
+
+
             // let currentSlide = 0;
+
             // const slides = document.querySelectorAll('.carousel-slide');
             // const track = document.querySelector('.carousel-track');
-            // const prevButton = document.querySelector('.carousel-btn.prev');
-            // const nextButton = document.querySelector('.carousel-btn.next');
+
 
             // function moveToSlide(index) {
             //     const slideWidth = slides[0].offsetWidth;
             //     track.style.transform = `translateX(-${index * slideWidth}px)`;
             // }
 
-            // prevButton.addEventListener('click', () => {
-            //     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            //     moveToSlide(currentSlide);
-            // });
-
-            // nextButton.addEventListener('click', () => {
+            // setInterval(() => {
             //     currentSlide = (currentSlide + 1) % slides.length;
             //     moveToSlide(currentSlide);
-            // });
-
-            // window.addEventListener('resize', () => moveToSlide(currentSlide));
-
-
-
-
-
-
-
-            //new addition start
-            document.addEventListener('DOMContentLoaded', () => {
-                let currentSlide = 0;
-                const slides = document.querySelectorAll('.carousel-slide');
-                const track = document.querySelector('.carousel-track');
-                const prevButton = document.querySelector('.carousel-btn.prev');
-                const nextButton = document.querySelector('.carousel-btn.next');
-                const indicatorsContainer = document.querySelector('.carousel-indicators');
-
-                function moveToSlide(index) {
-                    const slideWidth = slides[0].offsetWidth;
-                    track.style.transform = `translateX(-${index * slideWidth}px)`;
-                    updateIndicators(index);
-                }
-
-                function updateIndicators(index) {
-                    const indicators = indicatorsContainer.children;
-                    for (let i = 0; i < indicators.length; i++) {
-                        indicators[i].classList.toggle('active', i === index);
-                    }
-                }
-
-                function createIndicators() {
-                    slides.forEach((_, index) => {
-                        const bullet = document.createElement('span');
-                        bullet.classList.add('carousel-indicator');
-                        if (index === 0) bullet.classList.add('active');
-                        indicatorsContainer.appendChild(bullet);
-                    });
-                }
-
-                function resetAutoPlay() {
-                    clearInterval(autoPlayInterval);
-                    autoPlayInterval = setInterval(() => {
-                        currentSlide = (currentSlide + 1) % slides.length;
-                        moveToSlide(currentSlide);
-                    }, 5000);
-                }
-
-                createIndicators();
-                moveToSlide(currentSlide);
-
-                prevButton.addEventListener('click', () => {
-                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                    moveToSlide(currentSlide);
-                    resetAutoPlay();
-                });
-
-                nextButton.addEventListener('click', () => {
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    moveToSlide(currentSlide);
-                    resetAutoPlay();
-                });
-
-                let autoPlayInterval = setInterval(() => {
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    moveToSlide(currentSlide);
-                }, 5000);
-            });
-            //new addition end
-
+            // }, 5000);
 
 
 
