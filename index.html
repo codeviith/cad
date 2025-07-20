@@ -506,110 +506,110 @@
                     bar.style.color = '#fff';
                 });
             });
+        })
 
 
-            ///////////// Project Modal Card Click /////////////
-            document.querySelectorAll('.project-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const modalId = card.getAttribute('data-modal');
-                    document.getElementById(modalId).style.display = 'block';
-                });
+        ///////////// Project Modal Card Click /////////////
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const modalId = card.getAttribute('data-modal');
+                document.getElementById(modalId).style.display = 'block';
             });
+        });
 
-            document.querySelectorAll('.modal .close').forEach(closeBtn => {
-                closeBtn.addEventListener('click', () => {
-                    closeBtn.closest('.modal').style.display = 'none';
-                });
+        document.querySelectorAll('.modal .close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', () => {
+                closeBtn.closest('.modal').style.display = 'none';
             });
+        });
 
-            window.addEventListener('click', event => {
-                if (event.target.classList.contains('modal')) {
-                    event.target.style.display = 'none';
+        window.addEventListener('click', event => {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+
+
+        ///////////// Project Carousel /////////////
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const track = document.querySelector('.carousel-track');
+        const prevButton = document.querySelector('.carousel-btn.prev');
+        const nextButton = document.querySelector('.carousel-btn.next');
+
+        function moveToSlide(index) {
+            const slideWidth = slides[0].offsetWidth;
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            moveToSlide(currentSlide);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            moveToSlide(currentSlide);
+        });
+
+        window.addEventListener('resize', () => moveToSlide(currentSlide));
+
+
+
+        // let currentSlide = 0;
+
+        // const slides = document.querySelectorAll('.carousel-slide');
+        // const track = document.querySelector('.carousel-track');
+
+
+        // function moveToSlide(index) {
+        //     const slideWidth = slides[0].offsetWidth;
+        //     track.style.transform = `translateX(-${index * slideWidth}px)`;
+        // }
+
+        // setInterval(() => {
+        //     currentSlide = (currentSlide + 1) % slides.length;
+        //     moveToSlide(currentSlide);
+        // }, 5000);
+
+
+
+        ///////////// Light and Dark Mode /////////////
+        const lightModeButton = document.querySelector('#light-mode');
+        const darkModeButton = document.querySelector('#dark-mode');
+        let currentTheme = localStorage.getItem('theme') || 'light';
+
+        const body = document.body;
+        const modals = document.querySelectorAll('.modal-content');
+
+        function applyTheme(theme) {
+            body.classList.remove('light-mode', 'dark-mode');
+            body.classList.add(`${theme}-mode`);
+
+            modals.forEach(modal => {
+                if (theme === 'light') {
+                    modal.style.backgroundColor = '#fff';
+                    modal.style.color = '#000';
+                } else {
+                    modal.style.backgroundColor = '#1a1a1a';
+                    modal.style.color = '#f0f0f0';
                 }
             });
 
+            currentTheme = theme;
+            localStorage.setItem('theme', theme);
+            updateButtonStyles();
+        }
 
-            ///////////// Project Carousel /////////////
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.carousel-slide');
-            const track = document.querySelector('.carousel-track');
-            const prevButton = document.querySelector('.carousel-btn.prev');
-            const nextButton = document.querySelector('.carousel-btn.next');
+        function updateButtonStyles() {
+            lightModeButton.classList.toggle('active', currentTheme === 'light');
+            darkModeButton.classList.toggle('active', currentTheme === 'dark');
+        }
 
-            function moveToSlide(index) {
-                const slideWidth = slides[0].offsetWidth;
-                track.style.transform = `translateX(-${index * slideWidth}px)`;
-            }
+        applyTheme(currentTheme);
 
-            prevButton.addEventListener('click', () => {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                moveToSlide(currentSlide);
-            });
-
-            nextButton.addEventListener('click', () => {
-                currentSlide = (currentSlide + 1) % slides.length;
-                moveToSlide(currentSlide);
-            });
-
-            window.addEventListener('resize', () => moveToSlide(currentSlide));
-
-
-
-            // let currentSlide = 0;
-
-            // const slides = document.querySelectorAll('.carousel-slide');
-            // const track = document.querySelector('.carousel-track');
-
-
-            // function moveToSlide(index) {
-            //     const slideWidth = slides[0].offsetWidth;
-            //     track.style.transform = `translateX(-${index * slideWidth}px)`;
-            // }
-
-            // setInterval(() => {
-            //     currentSlide = (currentSlide + 1) % slides.length;
-            //     moveToSlide(currentSlide);
-            // }, 5000);
-
-
-
-            ///////////// Light and Dark Mode /////////////
-            const lightModeButton = document.querySelector('#light-mode');
-            const darkModeButton = document.querySelector('#dark-mode');
-            let currentTheme = localStorage.getItem('theme') || 'light';
-
-            const body = document.body;
-            const modals = document.querySelectorAll('.modal-content');
-
-            function applyTheme(theme) {
-                body.classList.remove('light-mode', 'dark-mode');
-                body.classList.add(`${theme}-mode`);
-
-                modals.forEach(modal => {
-                    if (theme === 'light') {
-                        modal.style.backgroundColor = '#fff';
-                        modal.style.color = '#000';
-                    } else {
-                        modal.style.backgroundColor = '#1a1a1a';
-                        modal.style.color = '#f0f0f0';
-                    }
-                });
-
-                currentTheme = theme;
-                localStorage.setItem('theme', theme);
-                updateButtonStyles();
-            }
-
-            function updateButtonStyles() {
-                lightModeButton.classList.toggle('active', currentTheme === 'light');
-                darkModeButton.classList.toggle('active', currentTheme === 'dark');
-            }
-
-            applyTheme(currentTheme);
-
-            lightModeButton.addEventListener('click', () => applyTheme('light'));
-            darkModeButton.addEventListener('click', () => applyTheme('dark'));
-        });
+        lightModeButton.addEventListener('click', () => applyTheme('light'));
+        darkModeButton.addEventListener('click', () => applyTheme('dark'));
     </script>
 </body>
 
