@@ -531,28 +531,28 @@
 
 
         ///////////// Project Carousel /////////////
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const track = document.querySelector('.carousel-track');
-        const prevButton = document.querySelector('.carousel-btn.prev');
-        const nextButton = document.querySelector('.carousel-btn.next');
+        // let currentSlide = 0;
+        // const slides = document.querySelectorAll('.carousel-slide');
+        // const track = document.querySelector('.carousel-track');
+        // const prevButton = document.querySelector('.carousel-btn.prev');
+        // const nextButton = document.querySelector('.carousel-btn.next');
 
-        function moveToSlide(index) {
-            const slideWidth = slides[0].offsetWidth;
-            track.style.transform = `translateX(-${index * slideWidth}px)`;
-        }
+        // function moveToSlide(index) {
+        //     const slideWidth = slides[0].offsetWidth;
+        //     track.style.transform = `translateX(-${index * slideWidth}px)`;
+        // }
 
-        prevButton.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            moveToSlide(currentSlide);
-        });
+        // prevButton.addEventListener('click', () => {
+        //     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        //     moveToSlide(currentSlide);
+        // });
 
-        nextButton.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            moveToSlide(currentSlide);
-        });
+        // nextButton.addEventListener('click', () => {
+        //     currentSlide = (currentSlide + 1) % slides.length;
+        //     moveToSlide(currentSlide);
+        // });
 
-        window.addEventListener('resize', () => moveToSlide(currentSlide));
+        // window.addEventListener('resize', () => moveToSlide(currentSlide));
 
 
 
@@ -575,41 +575,37 @@
 
 
         ///////////// Light and Dark Mode /////////////
-        const lightModeButton = document.querySelector('#light-mode');
-        const darkModeButton = document.querySelector('#dark-mode');
-        let currentTheme = localStorage.getItem('theme') || 'light';
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightModeButton = document.querySelector('#light-mode');
+            const darkModeButton = document.querySelector('#dark-mode');
+            const body = document.body;
+            const modals = document.querySelectorAll('.modal-content');
+            let currentTheme = localStorage.getItem('theme') || 'light';
 
-        const body = document.body;
-        const modals = document.querySelectorAll('.modal-content');
+            function applyTheme(theme) {
+                body.classList.remove('light-mode', 'dark-mode');
+                body.classList.add(`${theme}-mode`);
 
-        function applyTheme(theme) {
-            body.classList.remove('light-mode', 'dark-mode');
-            body.classList.add(`${theme}-mode`);
+                modals.forEach(modal => {
+                    modal.classList.remove('light-theme', 'dark-theme');
+                    modal.classList.add(theme === 'light' ? 'light-theme' : 'dark-theme');
+                });
 
-            modals.forEach(modal => {
-                if (theme === 'light') {
-                    modal.style.backgroundColor = '#fff';
-                    modal.style.color = '#000';
-                } else {
-                    modal.style.backgroundColor = '#1a1a1a';
-                    modal.style.color = '#f0f0f0';
-                }
-            });
+                currentTheme = theme;
+                localStorage.setItem('theme', theme);
+                updateButtonStyles();
+            }
 
-            currentTheme = theme;
-            localStorage.setItem('theme', theme);
-            updateButtonStyles();
-        }
+            function updateButtonStyles() {
+                lightModeButton.classList.toggle('active', currentTheme === 'light');
+                darkModeButton.classList.toggle('active', currentTheme === 'dark');
+            }
 
-        function updateButtonStyles() {
-            lightModeButton.classList.toggle('active', currentTheme === 'light');
-            darkModeButton.classList.toggle('active', currentTheme === 'dark');
-        }
+            lightModeButton.addEventListener('click', () => applyTheme('light'));
+            darkModeButton.addEventListener('click', () => applyTheme('dark'));
 
-        applyTheme(currentTheme);
-
-        lightModeButton.addEventListener('click', () => applyTheme('light'));
-        darkModeButton.addEventListener('click', () => applyTheme('dark'));
+            applyTheme(currentTheme); // apply stored or default theme on load
+        });
     </script>
 </body>
 
