@@ -369,7 +369,6 @@ body {
 }
 
 .project-card {
-  background-color: #fff;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
@@ -392,6 +391,17 @@ body {
   font-size: 0.95rem;
 }
 
+
+/* Project card background */
+body.light-mode .project-card {
+  background-color: #f0f0f0;
+  color: #131c24;
+}
+
+body.dark-mode .project-card {
+  background-color: #333333;
+  color: #ecf0f1;
+}
 
 
 /* Modal Styling */
@@ -843,6 +853,22 @@ body.dark-mode .footer {
     background-color: var(--footer-bg-color-dark);
     color: var(--footer-text-color-dark)
 }
+
+
+/* Modal background and text styles */
+body.light-mode .modal-content {
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+}
+
+body.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+
+
+
 
 
 /* Button styles */
