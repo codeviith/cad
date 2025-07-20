@@ -578,35 +578,37 @@
             const darkModeButton = document.querySelector('#dark-mode');
             let currentTheme = localStorage.getItem('theme') || 'light';
 
+            const body = document.body;
+            const modals = document.querySelectorAll('.modal-content');
+
             function applyTheme(theme) {
-                document.body.classList.remove('light-mode', 'dark-mode');
-                document.body.classList.add(theme + '-mode');
+                body.classList.remove('light-mode', 'dark-mode');
+                body.classList.add(`${theme}-mode`);
+
+                modals.forEach(modal => {
+                    if (theme === 'light') {
+                        modal.style.backgroundColor = '#fff';
+                        modal.style.color = '#000';
+                    } else {
+                        modal.style.backgroundColor = '#1a1a1a';
+                        modal.style.color = '#f0f0f0';
+                    }
+                });
+
                 currentTheme = theme;
                 localStorage.setItem('theme', theme);
                 updateButtonStyles();
             }
 
             function updateButtonStyles() {
-                if (currentTheme === 'light') {
-                    lightModeButton.classList.add('active');
-                    darkModeButton.classList.remove('active');
-                } else {
-                    lightModeButton.classList.remove('active');
-                    darkModeButton.classList.add('active');
-                }
+                lightModeButton.classList.toggle('active', currentTheme === 'light');
+                darkModeButton.classList.toggle('active', currentTheme === 'dark');
             }
 
-            // Apply the stored theme on page load
             applyTheme(currentTheme);
 
-            // Button click events
-            lightModeButton.addEventListener('click', () => {
-                applyTheme('light');
-            });
-
-            darkModeButton.addEventListener('click', () => {
-                applyTheme('dark');
-            });
+            lightModeButton.addEventListener('click', () => applyTheme('light'));
+            darkModeButton.addEventListener('click', () => applyTheme('dark'));
         });
     </script>
 </body>
