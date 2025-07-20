@@ -578,9 +578,15 @@
             const darkModeButton = document.querySelector('#dark-mode');
             let currentTheme = localStorage.getItem('theme') || 'light';
 
-            document.body.classList.add(currentTheme + '-mode');  /// code to apply initial theme
+            function applyTheme(theme) {
+                document.body.classList.remove('light-mode', 'dark-mode');
+                document.body.classList.add(theme + '-mode');
+                currentTheme = theme;
+                localStorage.setItem('theme', theme);
+                updateButtonStyles();
+            }
 
-            function updateButtonStyles() {  /// code to update button styles on background color
+            function updateButtonStyles() {
                 if (currentTheme === 'light') {
                     lightModeButton.classList.add('active');
                     darkModeButton.classList.remove('active');
@@ -590,22 +596,16 @@
                 }
             }
 
-            updateButtonStyles();  /// invoke the function to initialize the button styles based on the curernt theme
+            // Apply the stored theme on page load
+            applyTheme(currentTheme);
 
+            // Button click events
             lightModeButton.addEventListener('click', () => {
-                document.body.classList.remove('light-mode', 'dark-mode');
-                document.body.classList.add('light-mode');
-                localStorage.setItem('theme', 'light');
-                currentTheme = 'light';  /// code to update the currentTheme variable to 'light'
-                updateButtonStyles(); /// invoke the updateButtonStyles function to update the button styles
+                applyTheme('light');
             });
 
             darkModeButton.addEventListener('click', () => {
-                document.body.classList.remove('light-mode', 'dark-mode');
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
-                currentTheme = 'dark'; /// code to update the currentTheme variable to 'dark'
-                updateButtonStyles(); /// invoke the updateButtonStyles function to update the button styles
+                applyTheme('dark');
             });
         });
     </script>
