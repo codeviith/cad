@@ -108,18 +108,16 @@
     <section id="projects" class="fade-in">
         <h2>Projects</h2>
         <div class="project-grid">
-            <div class="project-card" onclick="openModal('modal1')">
+            <div class="project-card" data-modal="modal1">
                 <h3>Hanger Bay Display System</h3>
                 <p class="project-subtitle">Display Your Passion Like a Boss, LLC</p>
             </div>
-
-            <div class="project-card" onclick="openModal('modal2')">
+            <div class="project-card" data-modal="modal2">
                 <h3>DIY Electric Skateboard</h3>
-                <p class="project-subtitle">Personal Product Development</p>
+                <p class="project-subtitle">Personal Project</p>
             </div>
-
-            <div class="project-card" onclick="openModal('modal3')">
-                <h3>CoreXY 3D Printer Enhancements</h3>
+            <div class="project-card" data-modal="modal3">
+                <h3>Customized CoreXY 3D Printer</h3>
                 <p class="project-subtitle">Hardware Modification</p>
             </div>
         </div>
@@ -127,40 +125,59 @@
         <!-- Modal 1 -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <span class="close">&times;</span>
                 <h3>Hanger Bay Display System for Model Kits</h3>
                 <p><strong>Company:</strong> Display Your Passion Like a Boss, LLC</p>
                 <p><strong>Role:</strong> CAD Designer | Product Developer</p>
-                <p><strong>Tools Used:</strong> Fusion 360, OnShape | FDM & SLA 3D Printing</p>
+                <p><strong>Tools Used:</strong> Fusion 360, OnShape, FDM & SLA 3D Printing</p>
+                <p><strong>Project Type:</strong> Commercial Product Prototyping</p>
+                <p><strong>Years Active:</strong> 2021–Present</p>
                 <h4>Overview</h4>
-                <p>Designed and developed a modular display system styled after a mecha hangar bay for model kits and
-                    collectibles.</p>
+                <p>Designed and developed a modular display system styled after a mecha hangar bay, optimized for
+                    strength and aesthetics, supporting small-batch SLA 3D printed production.</p>
+                <ul>
+                    <li>Parametric CAD, print testing, and mechanical refinement</li>
+                    <li>Wall-mounting durability and modular design</li>
+                    <li>Client-ready production and small-batch alignment</li>
+                </ul>
             </div>
         </div>
 
         <!-- Modal 2 -->
         <div id="modal2" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal('modal2')">&times;</span>
-                <h3>DIY Electric Skateboard & Components</h3>
+                <span class="close">&times;</span>
+                <h3>DIY Electric Skateboard</h3>
                 <p><strong>Role:</strong> CAD Designer | Builder</p>
-                <p><strong>Tools Used:</strong> Fusion 360, FDM 3D Printing</p>
+                <p><strong>Tools Used:</strong> Fusion 360, FDM Printing, Parametric Modeling</p>
+                <p><strong>Years Active:</strong> 2016–2022</p>
                 <h4>Overview</h4>
-                <p>Designed and built a fully operational electric skateboard from scratch with custom mechanical and
-                    structural parts.</p>
+                <p>Designed and built a fully functional electric skateboard. CAD work included drivetrain mounts,
+                    enclosures, and brackets tailored to vibration resistance and outdoor use.</p>
+                <ul>
+                    <li>Iterative testing and thermal/material analysis</li>
+                    <li>Optimized layout for weight balance and strength</li>
+                    <li>Field-tested for speed, control, and durability</li>
+                </ul>
             </div>
         </div>
 
         <!-- Modal 3 -->
         <div id="modal3" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <span class="close">&times;</span>
                 <h3>Customized CoreXY 3D Printer Enhancements</h3>
                 <p><strong>Role:</strong> CAD Designer | Product Modifier</p>
-                <p><strong>Tools Used:</strong> Fusion 360, FDM 3D Printing, Mechanical Tuning</p>
+                <p><strong>Tools Used:</strong> Fusion 360, Custom Firmware, FDM Printing</p>
+                <p><strong>Years Active:</strong> 2020–2023</p>
                 <h4>Overview</h4>
-                <p>Implemented enhancements such as tool changers, motion system tuning, and cable management for
-                    improved print quality.</p>
+                <p>Upgraded and customized a CoreXY 3D printer for mechanical precision, reduced vibration, and improved
+                    motion control.</p>
+                <ul>
+                    <li>Tool changers, cooling systems, and cable management</li>
+                    <li>Redesigned structural mounts and mechanical tuning</li>
+                    <li>Performance testing with benchmark models</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -492,26 +509,24 @@
 
 
             ///////////// Project Modal Card Click /////////////
-            function openModal(id) {
-                document.getElementById(id).style.display = 'block';
-                document.body.classList.add('no-scroll');
-            }
-
-            function closeModal(id) {
-                document.getElementById(id).style.display = 'none';
-                document.body.classList.remove('no-scroll');
-            }
-
-            window.onclick = function (event) {
-                const modals = document.querySelectorAll('.modal');
-                modals.forEach(modal => {
-                    if (event.target === modal) {
-                        modal.style.display = 'none';
-                        document.body.classList.remove('no-scroll');
-                    }
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const modalId = card.getAttribute('data-modal');
+                    document.getElementById(modalId).style.display = 'block';
                 });
-            };
+            });
 
+            document.querySelectorAll('.modal .close').forEach(closeBtn => {
+                closeBtn.addEventListener('click', () => {
+                    closeBtn.closest('.modal').style.display = 'none';
+                });
+            });
+
+            window.addEventListener('click', event => {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            });
 
 
             ///////////// Project Carousel /////////////
