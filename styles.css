@@ -394,12 +394,12 @@ body {
 
 /* Project card background */
 body.light-mode .project-card {
-  background-color: #f0f0f0;
+  background-color: #d1d1d1;
   color: #131c24;
 }
 
 body.dark-mode .project-card {
-  background-color: #333333;
+  background-color: #1f2c39;
   color: #ecf0f1;
 }
 
@@ -855,19 +855,28 @@ body.dark-mode .footer {
 }
 
 
-/* Modal background and text styles */
+/* Modal popup text style and background */
 body.light-mode .modal-content {
-    background-color: #f9f9f9;
+    background-color: #d1d1d1;
     color: #1a1a1a;
 }
 
 body.dark-mode .modal-content {
-    background-color: #1e1e1e;
+    background-color: #131a20;
     color: #f0f0f0;
 }
 
 
+/* Project card background */
+/* body.light-mode .project-card {
+  background-color: #d1d1d1;
+  color: #131c24;
+}
 
+body.dark-mode .project-card {
+  background-color: #131a20;
+  color: #ecf0f1;
+} */
 
 
 
