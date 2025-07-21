@@ -33,7 +33,33 @@ header p {
 }
 
 
+/* header decor */
+header {
+  position: relative;
+  text-align: center;
+  padding: 2rem 0;
+  color: #ecf0f1;
+  z-index: 1;
+}
 
+.decor-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
 
 .header-lines::before,
 .header-lines::after {
