@@ -128,7 +128,6 @@
         <!-- Modal 1 -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <button class="modal-close-btn">Close</button>
                 <h3>Display System for Model Kits</h3>
                 <p><strong>Company:</strong> Display Your Passion Like a Boss, LLC</p>
                 <p><strong>Role:</strong> CAD Designer | Product Developer</p>
@@ -170,13 +169,13 @@
                 </ul>
 
                 <p><em>Note: Limited visuals shown due to intellectual property (IP) considerations.</em></p>
+                <button class="modal-close-btn">Close</button>
             </div>
         </div>
 
         <!-- Modal 2 -->
         <div id="modal2" class="modal">
             <div class="modal-content">
-                <button class="modal-close-btn">Close</button>
                 <h3>DIY Electric Skateboard</h3>
                 <p><strong>Role:</strong> CAD Designer | Builder</p>
                 <p><strong>Tools Used:</strong> Fusion 360 | OnShape | FDM 3D Printing | Parametric Modeling |
@@ -212,13 +211,13 @@
                     <img src="images/electric-skateboard-2.jpg" alt="Drivetrain Mount Close-Up" />
                     <!-- Add more images as needed -->
                 </div>
+                <button class="modal-close-btn">Close</button>
             </div>
         </div>
 
         <!-- Modal 3 -->
         <div id="modal3" class="modal">
             <div class="modal-content">
-                <button class="modal-close-btn">Close</button>
                 <h3>Customized CoreXY 3D Printer Enhancements</h3>
                 <p><strong>Role:</strong> CAD Designer | Product Modifier</p>
                 <p><strong>Tools Used:</strong>Fusion 360 | OnShape | Custom Firmware | FDM 3D Printing | Mechanical
@@ -257,6 +256,7 @@
                     <img src="images/corexy-upgrade-2.jpg" alt="3D Printer Cooling System" />
                     <!-- Add more images as needed -->
                 </div>
+                <button class="modal-close-btn">Close</button>
             </div>
         </div>
     </section>
@@ -592,7 +592,9 @@
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('click', () => {
                 const modalId = card.getAttribute('data-modal');
-                document.getElementById(modalId).style.display = 'block';
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+                document.body.classList.add('no-scroll');
             });
         });
 

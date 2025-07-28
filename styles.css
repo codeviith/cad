@@ -35,11 +35,11 @@ header p {
 
 /* header decor */
 header {
-  position: relative;
-  text-align: center;
-  padding: 2rem 0;
-  color: #ecf0f1;
-  z-index: 1;
+    position: relative;
+    text-align: center;
+    padding: 2rem 0;
+    color: #ecf0f1;
+    z-index: 1;
 }
 
 .decor-circle {
@@ -437,103 +437,111 @@ body {
 
 /* Modern Project Grid */
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
 }
 
 .project-card {
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
 }
 
 .project-subtitle {
-  color: #777;
-  font-size: 0.95rem;
+    color: #777;
+    font-size: 0.95rem;
 }
 
 
 /* Project card background */
 body.light-mode .project-card {
-  background-color: #d1d1d1;
-  color: #131c24;
+    background-color: #d1d1d1;
+    color: #131c24;
 }
 
 body.dark-mode .project-card {
-  background-color: #1f2c39;
-  color: #ecf0f1;
+    background-color: #1f2c39;
+    color: #ecf0f1;
 }
 
 
 /* Modal Styling */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  padding: 2rem;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 800px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  position: relative;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow-y: auto;
 }
 
 .modal-content h3 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .modal-close-btn {
-  display: block;
-  margin: 2rem auto 0;
-  padding: 10px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin: 2rem auto 0;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.light-mode .modal-close-btn {
-  background-color: #c0392b;  /* dark red */
-  color: white;
+    background-color: #c0392b;
+    /* dark red */
+    color: white;
 }
 
 body.light-mode .modal-close-btn:hover {
-  background-color: #a93226;
+    background-color: #a93226;
 }
 
 body.dark-mode .modal-close-btn {
-  background-color: #ff6b6b;  /* light red */
-  color: #1a1a1a;
+    background-color: #ff6b6b;
+    /* light red */
+    color: #1a1a1a;
 }
 
 body.dark-mode .modal-close-btn:hover {
-  background-color: #ff4d4d;
+    background-color: #ff4d4d;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 
@@ -541,13 +549,13 @@ body.dark-mode .modal-close-btn:hover {
 
 /* Mobile code */
 @media (max-width: 600px) {
-  .modal-content {
-    padding: 1.5rem;
-  }
+    .modal-content {
+        padding: 1.5rem;
+    }
 
-  .project-card {
-    padding: 1rem;
-  }
+    .project-card {
+        padding: 1rem;
+    }
 }
 
 
@@ -1003,4 +1011,3 @@ body.dark-mode .modal-content {
     justify-content: center;
     align-items: center;
 }
-
