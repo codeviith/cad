@@ -600,12 +600,21 @@
             });
         });
 
-        document.querySelectorAll('.modal-close-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                document.querySelectorAll('.modal').forEach(modal => {
+        // document.querySelectorAll('.close, .modal-close-btn').forEach(button => {
+        //     button.addEventListener('click', () => {
+        //         document.querySelectorAll('.modal').forEach(modal => {
+        //             modal.style.display = 'none';
+        //         });
+        //         document.body.classList.remove('no-scroll');
+        //     });
+        // });
+        document.querySelectorAll('.close, .modal-close-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const modal = button.closest('.modal'); // Find the parent modal
+                if (modal) {
                     modal.style.display = 'none';
-                });
-                document.body.classList.remove('no-scroll');
+                }
+                document.body.classList.remove('no-scroll'); // Re-enable scrolling
             });
         });
 
