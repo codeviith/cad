@@ -502,7 +502,7 @@ body.dark-mode .project-card {
     height: 80vh;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
@@ -512,7 +512,7 @@ body.dark-mode .project-card {
 }
 
 .modal-body {
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   padding-right: 10px;
   max-height: 100%;
