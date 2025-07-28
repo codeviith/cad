@@ -509,6 +509,21 @@ body.dark-mode .project-card {
     margin-top: 0;
 }
 
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal .close:hover {
+  color: #000;
+}
+
 .modal-close-btn {
     display: block;
     margin: 2rem auto 0;
