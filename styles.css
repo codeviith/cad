@@ -507,19 +507,35 @@ body.dark-mode .project-card {
   margin-top: 0;
 }
 
-.modal .close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+.modal-close-btn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.modal .close:hover {
-  color: #000;
+body.light-mode .modal-close-btn {
+  background-color: #c0392b;  /* dark red */
+  color: white;
 }
+
+body.light-mode .modal-close-btn:hover {
+  background-color: #a93226;
+}
+
+body.dark-mode .modal-close-btn {
+  background-color: #ff6b6b;  /* light red */
+  color: #1a1a1a;
+}
+
+body.dark-mode .modal-close-btn:hover {
+  background-color: #ff4d4d;
+}
+
 
 
 
