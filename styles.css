@@ -488,7 +488,7 @@ body.dark-mode .project-card {
     top: 0;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.75);
 }
 
@@ -499,10 +499,9 @@ body.dark-mode .project-card {
     border-radius: 12px;
     width: 90%;
     max-width: 800px;
-    max-height: 80vh;
+    height: 80vh;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     position: relative;
-    overflow-y: hidden;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -512,8 +511,9 @@ body.dark-mode .project-card {
     margin-top: 0;
 }
 
-.modal-scroll {
+.modal-body {
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 10px;
   max-height: 100%;
 }
