@@ -502,37 +502,46 @@ body.dark-mode .project-card {
     max-height: 80vh;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     position: relative;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-content h3 {
     margin-top: 0;
 }
 
+.modal-scroll {
+  overflow-y: auto;
+  padding-right: 10px;
+  max-height: 100%;
+}
+
 .modal .close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 body.light-mode .modal .close {
-  color: #c0392b;
+    color: #0e0d0d;
 }
 
 body.light-mode .modal .close:hover {
-  color: #a93226;
+    color: #515050;
 }
 
 body.dark-mode .modal .close {
-  color: #ff6b6b;
+    color: #ffffff;
 }
 
 body.dark-mode .modal .close:hover {
-  color: #ff4d4d;
+    color: #a7a6a6;
 }
 
 .modal-close-btn {
