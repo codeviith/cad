@@ -863,7 +863,7 @@ body.light-mode #actual-problem-code {
 }
 
 body.light-mode .footer {
-    background-color: var(--footer-bg-color-light);
+    /* background-color: var(--footer-bg-color-light); */
     color: var(--footer-text-color-light)
 }
 
@@ -975,7 +975,7 @@ body.dark-mode #solution-code {
 }
 
 body.dark-mode .footer {
-    background-color: var(--footer-bg-color-dark);
+    /* background-color: var(--footer-bg-color-dark); */
     color: var(--footer-text-color-dark)
 }
 
