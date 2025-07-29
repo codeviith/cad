@@ -32,11 +32,34 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
             body {
+                background-color: #424242;
+                color: #f0f0f0;
+                margin: 0;
+                font-family: sans-serif;
+            }
+
+            header.header-lines {
                 background-image: url('https://png.pngtree.com/background/20250502/original/pngtree-tech-themed-backdrop-featuring-circuit-board-electronic-components-on-a-motherboard-picture-image_15301137.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
-                background-attachment: fixed;
                 background-position: center;
+                background-attachment: scroll;
+                padding: 40px 20px;
+                text-align: center;
+                color: white;
+                position: relative;
+                z-index: 1;
+            }
+
+            header.header-lines::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: -1;
             }
         </style>
     </header>
