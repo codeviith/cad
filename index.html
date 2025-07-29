@@ -31,15 +31,28 @@
         <p class="position">CAD Designer | Product Design & Development</p>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
-            /* html,
+            html,
+            html,
             body {
                 margin: 0;
                 padding: 0;
                 overflow-x: hidden;
-                width: 100%;
             }
 
-            *,
+            * {
+                box-sizing: border-box;
+            }
+
+            img,
+            .project-grid,
+            .modal,
+            .modal-body,
+            .modal-content {
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            /* *,
             *::before,
             *::after {
                 box-sizing: border-box;
@@ -48,8 +61,9 @@
             body {
                 background-color: #222222;
                 color: #f0f0f0;
-                margin: 0;
+                margin: 0 auto;
                 font-family: sans-serif;
+                max-width: 1200px;
             }
 
             header.header-lines {
