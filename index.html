@@ -61,6 +61,34 @@
                 background: rgba(0, 0, 0, 0.5);
                 z-index: -1;
             }
+
+            footer {
+                background-image: url('https://png.pngtree.com/background/20250502/original/pngtree-tech-themed-backdrop-featuring-circuit-board-electronic-components-on-a-motherboard-picture-image_15301137.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+            }
+
+            footer::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: -1;
+            }
+
+            footer .footer {
+                position: relative;
+                z-index: 2;
+            }
         </style>
     </header>
 

@@ -751,7 +751,7 @@ html {
 /* Light mode styles */
 body.light-mode header {
     background-color: var(--header-bg-color-light);
-    color: var(--header-text-color-light)
+    /* color: var(--header-text-color-light) */
 }
 
 body.light-mode {
