@@ -999,11 +999,11 @@ body.dark-mode .modal-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     padding: 1rem;
     text-align: center;
     /* position: relative; */
-    z-index: 10;
+    /* z-index: 10; */
 }
 
 .mode-label {
