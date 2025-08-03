@@ -512,10 +512,10 @@ body.dark-mode .project-card {
 }
 
 .modal-body {
-  overflow-y: hidden;
-  overflow-x: hidden;
-  padding-right: 10px;
-  max-height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-right: 10px;
+    max-height: 100%;
 }
 
 .modal .close {
@@ -864,7 +864,8 @@ body.light-mode #actual-problem-code {
 
 body.light-mode .footer {
     /* background-color: var(--footer-bg-color-light); */
-    color: var(--footer-text-color-light)
+    /* color: var(--footer-text-color-light) */
+    color: var(--footer-text-color-dark)
 }
 
 
@@ -998,9 +999,11 @@ body.dark-mode .modal-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto;
+    margin-top: -12px;
     padding: 1rem;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
 .mode-label {
