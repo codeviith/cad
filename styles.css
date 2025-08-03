@@ -999,7 +999,7 @@ body.dark-mode .modal-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
     padding: 1rem;
     text-align: center;
     /* position: relative; */
