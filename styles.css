@@ -999,11 +999,10 @@ body.dark-mode .modal-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto 5px;
-    padding: 2rem;
+    margin-top: auto;
+    padding: 1rem;
     text-align: center;
     position: relative;
-    /* z-index: 10; */
 }
 
 .mode-label {
@@ -1012,8 +1011,7 @@ body.dark-mode .modal-content {
 }
 
 .theme-toggle-container .mode-label {
-    position: relative;
-    top: -12px;
+    transform: translateY(-12px);
 }
 
 
