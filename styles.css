@@ -1010,11 +1010,11 @@ body.dark-mode .modal-content {
     gap: 10px;
 }
 
-/* .theme-toggle-container .mode-label {
+.theme-toggle-container .mode-label {
     transform: translateY(-12px);
     display: flex;
     gap: 10px;
-} */
+}
 
 
 /* Default */
