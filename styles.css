@@ -1002,7 +1002,7 @@ body.dark-mode .modal-content {
     margin-top: auto;
     padding: 1rem;
     text-align: center;
-    /* position: relative; */
+    position: relative;
     /* z-index: 10; */
 }
 
