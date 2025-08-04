@@ -1012,6 +1012,8 @@ body.dark-mode .modal-content {
 
 .theme-toggle-container .mode-label {
     transform: translateY(-12px);
+    display: flex;
+    gap: 10px;
 }
 
 
