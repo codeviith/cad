@@ -215,6 +215,11 @@ a:hover {
     text-align: center;
     margin-top: 0;
     font-size: 1rem;
+    transform: translateY(15px);
+}
+
+.toc nav {
+    transform: translateY(15px);
 }
 
 .toc nav ul {
